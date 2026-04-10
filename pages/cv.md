@@ -12,8 +12,8 @@ permalink: /cv/
 **University of Washington** — PhD, Physics · 2026–present
 *Advisor: TBD.*
 
-**[Undergraduate institution]** — BSc, Physics · 20XX–20XX
-*Honors thesis: "Title."*
+**University of Illinois Urbana-Champaign** — BSc, Physics · 2022–2026
+*Advisors: Alexey Bezryadin and Eugene Colla*
 
 ## Awards & fellowships
 
