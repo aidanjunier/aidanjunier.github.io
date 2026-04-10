@@ -1,0 +1,31 @@
+---
+title: Publications
+eyebrow: 02 — Papers & preprints
+lede: Edit /_data/publications.yml to add new entries.
+permalink: /publications/
+---
+
+<div class="page__body wide">
+<ul class="pub-list">
+{% assign pubs = site.data.publications | sort: "year" | reverse %}
+{% for p in pubs %}
+  <li class="pub">
+    <div class="pub__year">{{ p.year }}</div>
+    <div>
+      <h3 class="pub__title">
+        {{ p.title }}
+        {% if p.status and p.status != "published" %}<span class="pub__status">{{ p.status | replace: "_", " " }}</span>{% endif %}
+      </h3>
+      <p class="pub__authors">{{ p.authors | markdownify | remove: "<p>" | remove: "</p>" }}</p>
+      {% if p.venue %}<p class="pub__venue">{{ p.venue }}</p>{% endif %}
+      {% if p.abstract and p.abstract != "" %}<p class="pub__abstract">{{ p.abstract }}</p>{% endif %}
+      <div class="pub__links">
+        {% if p.url %}<a href="{{ p.url }}">link</a>{% endif %}
+        {% if p.arxiv %}<a href="https://arxiv.org/abs/{{ p.arxiv }}">arxiv:{{ p.arxiv }}</a>{% endif %}
+        {% if p.doi %}<a href="https://doi.org/{{ p.doi }}">doi</a>{% endif %}
+      </div>
+    </div>
+  </li>
+{% endfor %}
+</ul>
+</div>
