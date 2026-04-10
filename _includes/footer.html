@@ -1,0 +1,18 @@
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <p class="site-footer__col">
+      {{ site.author.name }}<br>
+      {{ site.author.office }}<br>
+      {{ site.author.affiliation }}
+    </p>
+    <p class="site-footer__col">
+      <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a><br>
+      {% if site.author.orcid %}<a href="https://orcid.org/{{ site.author.orcid }}">ORCID</a> · {% endif %}
+      {% if site.author.scholar %}<a href="https://scholar.google.com/citations?user={{ site.author.scholar }}">Scholar</a> · {% endif %}
+      {% if site.author.github %}<a href="https://github.com/{{ site.author.github }}">GitHub</a>{% endif %}
+    </p>
+    <p class="site-footer__col site-footer__meta">
+      © {{ site.time | date: "%Y" }} · last updated {{ site.time | date: "%b %-d, %Y" }}
+    </p>
+  </div>
+</footer>
